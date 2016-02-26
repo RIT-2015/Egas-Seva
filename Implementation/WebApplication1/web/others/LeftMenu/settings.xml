@@ -1,0 +1,110 @@
+<settings>
+  <General_Properties>
+    <componentWidth value="600"/>
+    <componentHeight value="380"/>
+    <assets value="assets/skins/skin3.xml"/>
+    <preloader value="assets/preloaders/video.swf"/>
+    <autoScroll value="true"/>
+    <showAbout value="true"/>
+  </General_Properties>
+  <News_Properties>
+    <source value="rss"/>
+    <newsLink value="http://feeds.bbci.co.uk/news/science_and_environment/rss.xml"/>
+    <width value="553"/>
+    <height value="66"/>
+    <spaceBetween value="10"/>
+    <backgroundType value="image"/>
+    <backgroundColor value="0xe0e0e0"/>
+    <backgroundColor2 value="0xe0e0e0"/>
+    <backgroundImage value="assets/skins/skin3/headline.png"/>
+    <backgroundImage2 value="assets/skins/skin3/headlineOver.png"/>
+    <cssStyle value="assets/css/style3.css"/>
+    <offsetTop value="20"/>
+    <offsetBottom value="10"/>
+    <offsetLeft value="10"/>
+  </News_Properties>
+  <Expand_Properties>
+    <func value="circular"/>
+    <method value="easeinout"/>
+    <duration value="0.7"/>
+    <singleExpanding value="true"/>
+    <firstNewsExpand value="true"/>
+  </Expand_Properties>
+  <Title_Properties>
+    <width value="0"/>
+    <paddingTop value="0"/>
+    <paddingBottom value="0"/>
+    <paddingLeft value="0"/>
+    <paddingRight value="0"/>
+    <offsetLeft value="0"/>
+    <offsetTop value="0"/>
+    <backgroundColor value="0x000000"/>
+    <backgroundAlpha value="0"/>
+    <cornerRadius value="0"/>
+    <useDouble value="false"/>
+    <useDoubleDirection value="TL"/>
+    <text value=""/>
+  </Title_Properties>
+  <Head_Properties>
+    <offsetTop value="0"/>
+    <offsetLeft value="0"/>
+    <offsetRight value="0"/>
+    <backgroundColor value="0xffffff"/>
+    <backgroundAlpha value="0"/>
+    <cornerRadius value="0"/>
+    <textPaddingTop value="12"/>
+    <textPaddingBottom value="2"/>
+    <textPaddingLeft value="15"/>
+    <textPaddingRight value="15"/>
+    <useDouble value="false"/>
+    <useDoubleDirection value="TC"/>
+    <embedFont value="false"/>
+  </Head_Properties>
+  <Body_Properties>
+    <offsetTop value="24"/>
+    <offsetBottom value="0"/>
+    <offsetLeft value="0"/>
+    <offsetRight value="0"/>
+    <backgroundColor value="0xfafafa"/>
+    <backgroundAlpha value="100"/>
+    <cornerRadius value="0"/>
+    <textPaddingTop value="20"/>
+    <textPaddingBottom value="20"/>
+    <textPaddingLeft value="20"/>
+    <textPaddingRight value="20"/>
+    <useDouble value="false"/>
+    <useDoubleDirection value="TL"/>
+    <embedFont value="false"/>
+    <imageWidth value="510"/>
+    <imageHeight value="155"/>
+    <imageOffsetTop value="20"/>
+    <imageOffsetLeft value="20"/>
+  </Body_Properties>
+  <Background_Properties>
+    <fillType value="image"/>
+    <backgroundImage value="assets/backgroundImages/diagonalScan.png"/>
+    <backgroundFitting value="repeat"/>
+    <backgroundColor1 value="0xe0e0e0"/>
+    <backgroundColor2 value="0xe0e0e0"/>
+    <backgroundAlpha value="1"/>
+    <bgCornerRadius value="0"/>
+    <gradientRotation value="30"/>
+    <gradientRatio value="40"/>
+    <gradientPosX value="0"/>
+    <gradientPosY value="0"/>
+    <useShade value="false"/>
+    <shadeColor value=""/>
+    <shadeAlpha value="0"/>
+    <shadeRatio value="0"/>
+    <shadeWidth value="0"/>
+    <shadeHeight value="0"/>
+  </Background_Properties>
+  <Shade_Properties>
+    <useShade value="false"/>
+    <shadeColor value="0x112233"/>
+    <shadeAlpha value="0.5"/>
+    <shadeRatio value="100"/>
+    <shadeWidth value="50"/>
+    <shadeHeight value="0"/>
+  </Shade_Properties>
+</settings>

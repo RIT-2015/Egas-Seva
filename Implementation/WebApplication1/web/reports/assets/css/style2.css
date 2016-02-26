@@ -1,0 +1,30 @@
+row{
+	font-family:Arial;
+	font-size:16pt;
+	color:#CC0000;
+}
+
+column{
+	font-family:Arial;
+	font-size:16pt;
+	color:#CC0000;
+}
+
+legend{
+	font-family:Arial;
+	font-size:14pt;
+	color:#CC0000;
+}
+
+head {
+	font-family:Arial;
+	font-size:14pt;
+	color:#1d1d1d;
+	font-weight:bold;
+}
+
+body{
+	font-family:Arial;
+	font-size:14pt;
+	color:#1d1d1d;
+}

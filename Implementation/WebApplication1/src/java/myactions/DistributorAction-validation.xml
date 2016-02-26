@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : DistributorAction-validation.xml
+    Created on : March 24, 2012, 9:55 PM
+    Author     : shashi
+    Description:
+        Purpose of the document follows.
+-->
+
+<!DOCTYPE validators PUBLIC '-//OpenSymphony Group//XWork Validator 1.0.2//EN' 'http://www.opensymphony.com/xwork/xwork-validator-1.0.2.dtd'>
+
+<validators>         
+
+    <field name="distributor.fname">
+    <field-validator type="requiredstring"><message>full name required</message></field-validator>
+    </field>      
+    <field name="distributor.lname">
+    <field-validator type="requiredstring"><message>full name required</message></field-validator>
+    </field>    
+    <field name="distributor.dob">
+    <field-validator type="requiredstring"><message>enter date of birth</message></field-validator>
+    </field>    
+    <field name="distributor.gender">
+    <field-validator type="requiredstring"><message>select gender</message></field-validator>
+    </field>
+    <field name="distributor.address">
+    <field-validator type="requiredstring"><message>address is required</message></field-validator>
+    </field>
+    <field name="distributor.pin">
+    <field-validator type="requiredstring"><message>pin no. required</message></field-validator>
+    </field>
+    <field name="distributor.city">
+    <field-validator type="requiredstring"><message>city is required</message></field-validator>
+    </field>
+    <field name="distributor.state">
+    <field-validator type="requiredstring"><message>state is required</message></field-validator>
+    </field>
+    <field name="distributor.mobile">
+    <field-validator type="requiredstring"><message>enter mobile no.</message></field-validator>
+    </field>
+    <field name="distributor.email">
+    <field-validator type="requiredstring"><message>email id required</message></field-validator>
+    </field>
+  
+    <field name="distributor.serviceCity">
+    <field-validator type="requiredstring"><message>enter city for service</message></field-validator>
+    </field>    
+    
+</validators>
+

@@ -1,0 +1,12 @@
+<menu>
+	<item text="ViewProfile" url="http://localhost:8080/egas/distributor/UneditProfile.action" target="" />
+	<item text="Customers" url="http://localhost:8080/egas/distributor/ViewCustomer.action" target="" />
+	<item text="NewApplications" url="http://localhost:8080/egas/distributor/NewApplication.action" target=""/>
+	<item text="LPG Orders" url="http://localhost:8080/egas/distributor/PendingOrders.action" target=""/>
+        <item text="Product Orders" url="http://localhost:8080/egas/distributor/ProductView.action" target=""/>
+        <item text="Feedback" url="http://localhost:8080/egas/distributor/feedbackD.action" target=""/>
+        <item text="ViewReports" url="http://localhost:8080/egas/distributor/ViewReports.action" target=""/>
+        <item text="SendMail" url="http://localhost:8080/egas/distributor/SendMail.action" target=""/>
+        <item text="Geolocation" url="http://localhost:8080/egas/distributor/GeoView.action" target=""/>
+        
+</menu>

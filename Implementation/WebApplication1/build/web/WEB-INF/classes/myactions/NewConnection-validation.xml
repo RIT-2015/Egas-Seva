@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : NewConnection-validation.xml
+    Created on : March 25, 2012, 6:25 PM
+    Author     : shashi
+    Description:
+        Purpose of the document follows.
+-->
+
+<!DOCTYPE validators PUBLIC '-//OpenSymphony Group//XWork Validator 1.0.2//EN' 'http://www.opensymphony.com/xwork/xwork-validator-1.0.2.dtd'>
+
+<validators>         
+  < 
+    <field name="customer.fname">
+    <field-validator type="requiredstring"><message>full name required</message></field-validator>
+    </field>  
+    <field name="customer.mname">
+    <field-validator type="requiredstring"><message>full name required</message></field-validator>
+    </field>
+    <field name="customer.lname">
+    <field-validator type="requiredstring"><message>full name required</message></field-validator>
+    </field>    
+    <field name="customer.dob">
+    <field-validator type="requiredstring"><message>enter date of birth</message></field-validator>
+    </field>    
+    <field name="customer.gender">
+    <field-validator type="requiredstring"><message>Select gender</message></field-validator>
+    </field>
+    <field name="customer.address">
+    <field-validator type="requiredstring"><message>address is required</message></field-validator>
+    </field>
+    <field name="customer.pin">
+    <field-validator type="requiredstring"><message>pin required</message></field-validator>
+    </field>
+    <field name="customer.city">
+    <field-validator type="requiredstring"><message>city required</message></field-validator>
+    </field>
+   <!-- <field name="customer.state">
+    <field-validator type="required"><message>state is required.</message></field-validator>
+    </field> -->
+    <field name="customer.mobile">
+    <field-validator type="requiredstring"><message>mobile no. required</message></field-validator>
+    </field>
+    <field name="customer.contactno1">
+    <field-validator type="requiredstring"><message>alternate no. required</message></field-validator>
+    </field>
+    <field name="customer.d_id">
+    <field-validator type="requiredstring"><message>distributor id required</message></field-validator>
+    </field>
+    <field name="customer.email">
+    <field-validator type="requiredstring"><message>email required</message></field-validator>
+    </field>
+    <field name="customer.cus_type">
+    <field-validator type="requiredstring"><message>customer type required</message></field-validator>
+    </field>
+    <field name="customer.no_of_cylinder">
+    <field-validator type="requiredstring"><message>select no. of cylinders</message></field-validator>
+    </field>
+    
+</validators>

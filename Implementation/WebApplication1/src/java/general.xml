@@ -1,0 +1,67 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<!-- Author: shashi -->
+ 
+<struts>
+    <!-- Add your configuration elements here -->
+    
+    <package name="general" namespace="/general" extends="struts-default">
+        
+        <result-types>
+            <result-type name="tiles" class="org.apache.struts2.views.tiles.TilesResult" />
+        </result-types>
+                
+        <global-results>
+            <result name="home" type="tiles">home.page</result>
+        </global-results>
+       
+       
+      <!-- validation / interceptor = "input"    session= "home"         -->  
+       
+        <action name="*ConnectionForm" >
+            <result type="tiles">general.newConnection</result>    
+        </action>  
+        
+        <action name="customerRegForm">
+            <result type="tiles">general.custRegister</result>    
+        </action>
+        
+        <action name="distributorApplnForm">
+            <result type="tiles">general.distApplication</result>     
+        </action>
+        
+        <!-- use method="recaptchaTest" for "insertConnectionAppln" "register" "insertDistributorAppln"   -->
+        
+        <action name="*Connection" class="myactions.NewConnection" method="insertConnectionAppln">
+            <result name="success" type="tiles">general.newConSuccess</result>             
+            <result name="input" type="tiles">general.newConnection</result>
+        </action> 
+    
+        <action name="customerReg" class="myactions.CustomerAction" method="register"> 
+            <result name="success" type="tiles">userlogin.page</result> 
+            <result name="input" type="tiles">general.custRegister</result>
+        </action>
+        
+        <action name="distributorInsertAppln" class="myactions.DistributorAction" method="insertDistributorAppln">
+            <result name="success" type="tiles">general.distApplnSuccess</result>  
+            <result name="input" type="tiles">general.distApplication</result>
+        </action>            
+        
+        
+        <action name="faq" class="myactions.FaqAction" method="getFaqs">                   
+            <result name="success" type="tiles">general.viewFAQs</result>       
+        </action>
+        
+
+        
+  
+        <action name="games">
+            <result type="tiles">general.games</result>    
+        </action>
+  
+    </package>
+    
+</struts>
+

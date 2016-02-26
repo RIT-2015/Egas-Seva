@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<!-- Author: shashi -->
+ 
+<struts>
+     <!--   Here the mapping is done using the dynamic method invocation feature of Struts 2 -->   
+    
+    <package name="admin" namespace="/admin" extends="struts-default">  
+    
+
+ <!--             
+     <interceptors>
+         <interceptor name="authenticate" class="others.SecurityInterceptor"/>
+         <interceptor-stack name="authenticationStack">
+               <interceptor-ref name="authenticate"/>           
+         </interceptor-stack>
+     </interceptors>   
+         
+        <default-interceptor-ref name="authenticationStack"/>
+  -->  <!--    
+    <interceptors>
+        <interceptor name="SecurityInterceptor" class="others.SecurityInterceptor"/>
+        <interceptor-stack name="myStack">
+           <interceptor-ref name="SecurityInterceptor"/>
+        </interceptor-stack>
+    </interceptors>
+  -->      
+  <!--
+       <global-results>
+            <result name="home" type="redirect-action">
+                <param name="actionName">Login</param>
+                <param name="method">failure</param>
+                <param name="namespace">/</param>
+            </result>
+        </global-results> 
+        
+  -->      
+        <result-types>
+            <result-type name="tiles" class="org.apache.struts2.views.tiles.TilesResult" />
+        </result-types>      
+        
+        
+        
+        <!--       returned from SecurityInterceptor      -->
+        <global-results>
+            <result name="home" type="tiles">home.page</result>
+            <result name="input" type="tiles">home.page</result>
+        </global-results>
+        
+        
+        
+    <action name="AdminHome">
+        <result type="tiles">AdminHome.page</result>
+    </action>
+    
+    
+    
+    
+    
+    
+    
+        
+        
+         
+        <action name="*Admin" class="myactions.AdminAction" method="{1}">                   
+  <!--      <interceptor-ref name="myStack"/>
+   -->  <result name="viewProfile" type="tiles">admin.viewProfile</result>
+        <result name="updatePage" type="tiles">admin.updateProfile</result>
+        </action>
+        
+       <action name="reports">
+            <result type="tiles">admin.reports</result>    
+        </action>        
+        
+        <action name="*Chart" class="myactions.ChartAction" method="{1}">
+            <result name="customerCities" type="tiles">chart.customerCities</result>
+            <result name="regCustomerCities" type="tiles">chart.regCustomerCities</result>
+            <result name="distributorCities" type="tiles">chart.distributorCities</result>
+            
+        </action>
+        
+        
+        <action name="barchart" class="myactions.ChartAction" method="barchart">
+            <result name="success" type="tiles">chart.barchart</result>
+        </action>
+        
+        <action name="piechart" class="myactions.ChartAction" method="piechart">
+            <result name="success" type="tiles">chart.piechart</result>
+        </action>
+               
+        
+            
+        
+        
+        
+        
+        
+        
+        
+        
+       <!-- old --> 
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        <action name="distributorApplns" class="myactions.DistributorAction" method="getApplications">
+            <result name="success" type="tiles">admin.distApplications</result>      
+        </action>
+        
+        <action name="distributorApprove" class="myactions.DistributorAction" method="approveAppln">
+            <result name="success" type="tiles">admin.distApplications</result>      
+        </action>
+        
+        <action name="distributorReject" class="myactions.DistributorAction" method="rejectAppln">
+            <result name="success" type="tiles">admin.distApplications</result> 
+        </action>
+        
+        <action name="distributor" class="myactions.DistributorAction" method="getDistributors">        
+            <result name="distributors" type="tiles">admin.viewDistributors</result>        
+        </action>
+        
+        <action name="distributorDetails" class="myactions.DistributorAction" method="distributorDetails">
+            <result name="success" type="tiles">admin.detailsDistributor</result>
+        </action>
+        
+        <action name="distributorDel" class="myactions.DistributorAction" method="deleteDistributor">        
+            <result name="distributors" type="tiles">admin.viewDistributors</result>       
+        </action>                
+        
+        <action name="distApplnDetails" class="myactions.DistributorAction" method="distApplnDetails">        
+            <result name="success" type="tiles">admin.detailsDistAppln</result>       
+        </action>  
+        
+        
+       
+       
+       
+        <action name="faq" class="myactions.FaqAction" method="getFaqs">                   
+            <result name="success" type="tiles">admin.viewFAQs</result>       
+        </action>
+                     
+        <action name="faqAdd" class="myactions.FaqAction" method="addFaq">
+            <result name="success" type="tiles">admin.viewFAQs</result>       
+        </action>
+        
+        <action name="faqDel" class="myactions.FaqAction" method="deleteFaq">
+            <result name="success" type="tiles">admin.viewFAQs</result>  
+        </action>
+
+
+   
+       
+        
+        <action name="product" class="myactions.ProductAction" method="getProducts">   
+            <result name="success" type="tiles">admin.viewProducts</result>       
+        </action>       
+              
+        <action name="productAdd" class="myactions.ProductAction" method="addProduct">   
+            <result name="success" type="tiles">admin.viewProducts</result>       
+        </action>
+      
+        <action name="productDel" class="myactions.ProductAction" method="deleteProduct">
+            <result name="success" type="tiles">admin.viewProducts</result>
+        </action>
+        
+        
+      
+        
+        <action name="feedbackDel" class="myactions.FeedbackAction" method="deleteFeedback">
+            <result name="success" type="tiles">admin.viewFeedbacks</result>
+        </action>
+        
+        <action name="feedback" class="myactions.FeedbackAction" method="getFeedbacks"> 
+            <result name="success" type="tiles">admin.viewFeedbacks</result>
+        </action>
+        
+        <action name="feedbackDetails" class="myactions.FeedbackAction" method="feedbackDetails">
+            <result name="success" type="tiles">admin.detailsFeedback</result>
+        </action>
+  
+        <action name="feedbackReply" class="myactions.FeedbackAction" method="reply">
+            <result name="success" type="tiles">admin.detailsFeedback</result>
+        </action>
+      
+        
+         
+         
+         
+        
+        
+        
+        
+    <!--    
+        <action name="download" class="myActions.DownloadAction">
+            <result name="success" type="stream">
+                <param name="contentType">application/octet-stream</param>
+                <param name="inputName">fileInputStream</param>
+                <param name="contentDisposition">attachment;filename="fileABC.txt"</param>
+                <param name="bufferSize">1024</param>
+            </result>
+        </action>
+   -->     
+        
+        
+   <!--     
+         <action name="UploadMyFile" class="org.struts2.samples.upload.UploadMyFile">
+	                        <interceptor-ref name="defaultStack">
+	                            <param name="fileUpload.allowedTypes">text/plain</param>
+	                            <param name="fileUpload.maximumSize">50000</param>
+	                        </interceptor-ref>
+	                        <result name="input">/uploadform.jsp</result>
+	            <result name="success">/uploadresults.jsp</result>
+	        </action>
+   -->     
+        <action name="mail" >
+            <result type="tiles">admin.mailIndex</result>   
+        </action>
+        
+        <action name="mailSend" >
+            <result type="tiles">admin.sendMail</result>    
+        </action>
+        
+        
+        
+    </package>
+      
+       
+   
+</struts>

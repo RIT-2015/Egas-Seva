@@ -1,0 +1,10 @@
+<menu>
+	<item text="View Profile" url="http://localhost:8080/egas/customer/CustomerAction!viewCDetails.action" target=""/>
+        <item text="LPG Orders" url="http://localhost:8080/egas/customer/OrderAction!viewOrder.action" target="" />
+	<item text="Product Orders" url="http://localhost:8080/egas/customer/OrderproductAction!viewProductOrder.action" target="" />
+	<item text="LPG Booking" url="http://localhost:8080/egas/customer/OrderAction!generateOrder.action" target=""/>
+	<item text="Change Address" url="http://localhost:8080/egas/customer/TransferAction!changereq.action" target=""/>
+	<item text="View Products" url="http://localhost:8080/egas/customer/CustomerAction!orderproduct.action" target=""/>
+        <item text="Feedback" url="http://localhost:8080/egas/customer/feedbackForm.action" target=""/>
+       <item text="Invite a friend" url="http://localhost:8080/egas/customer/CustomerAction!invite.action" target=""/>
+</menu>

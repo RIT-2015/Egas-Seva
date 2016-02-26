@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : FeedbackAction-validation.xml
+    Created on : March 24, 2012, 4:55 PM
+    Author     : shashi
+    Description:
+        Purpose of the document follows.
+-->
+
+<!DOCTYPE validators PUBLIC '-//OpenSymphony Group//XWork Validator 1.0.2//EN' 'http://www.opensymphony.com/xwork/xwork-validator-1.0.2.dtd'>
+
+<validators>         
+   
+         
+    <field name="fb.custID">
+    <field-validator type="requiredstring"><message>Consumer no. is required.</message></field-validator>
+    </field>
+    <field name="fb.distID">
+    <field-validator type="requiredstring"><message>Distributor ID is required.</message></field-validator>
+    </field>   
+    <field name="fb.type">
+    <field-validator type="requiredstring"><message>feedback type is required.</message></field-validator>
+    </field> 
+    <field name="fb.category">
+    <field-validator type="requiredstring"><message>cateory is required.</message></field-validator>
+    </field>
+    <field name="fb.description">
+    <field-validator type="requiredstring"><message>please enter description.</message></field-validator>
+    </field>    
+    <field name="fb.email">
+    <field-validator type="requiredstring"><message>E-mail id is required.</message></field-validator>
+    </field>
+    
+   
+        
+</validators>
+
+
+

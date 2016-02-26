@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<button out="assets/skins/skin3/btn.png" over="assets/skins/skin3/btnOver.png" down="assets/skins/skin3/btnOver.png"/>
+	<dragBar out="assets/skins/skin3/dragBar.png" over="assets/skins/skin3/dragBarOver.png" down="assets/skins/skin3/dragBarOver.png"/>
+	<back out="assets/skins/skin3/back.png"/>
+</data>

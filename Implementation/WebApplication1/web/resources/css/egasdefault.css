@@ -1,0 +1,52 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+background-image:url(../images/finallogo.jpg);
+background-repeat:no-repeat;
+margin-left: 100px;
+margin-right: 100px;
+}
+
+#back{
+background-color: white;
+}
+
+#panel-left {
+	border:thin;
+float:left;
+border-right:thin;
+border:thin;
+}
+
+.footer {
+    background-image: url(../images/home/egasFooter1.jpg);
+    position:relative ;
+    border-color: #000;
+    border: 1px;
+}
+
+#wrap {
+margin : 50px auto 0px auto;
+width : 750px;
+}
+	       
+#description {
+margin-top: 80px;
+}
+	       
+#description ul {
+margin: 0px;
+padding: 0px;
+list-style: none;
+}
+
+h2 {
+font-family: helvetica, arial;
+font-size: 15pt;
+color: #888;
+}
+
+pre {
+font-size: 8pt;
+}

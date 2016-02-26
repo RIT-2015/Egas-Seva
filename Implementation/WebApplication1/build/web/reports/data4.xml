@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<chart>
+	<title><![CDATA[<head>E-Gas Sewa <br/></head><body>Distributor's Daily Report</body>]]></title>
+	<rows min="0" max="100" step="10"/>
+	<columns names="Order Placed,Delivered Order,Cancelled Order">
+		<row legend="OrdersPlaced" pieLegend="Order Placed" color="0xff2346" gradientColor="0xff5603" pieColors="0xff2346,0xff2346,0xd0ff48" pieGradentColors="0xff5603, 0x01a42a, 0x75ff03" data="0, 0,0"/>
+		<row legend="DeliveredOrder" pieLegend="Delivered Order" color="0x3ae29d" gradientColor="0x01a42a" pieColors="0xff2346,0x3ae29d,0xd0ff48" pieGradentColors="0x45bf03, 0xff5603, 0x75ff03" data="22,23.7,65"/>
+		<row legend="CancelOrder" pieLegend="Cancelled Order" color="0xd0ff48" gradientColor="0x75ff03" pieColors="0xff2346,0xd0ff48,0xd0ff48" pieGradentColors="0x45bf03, 0x75ff03, 0x75ff03" data="0,0,0"/>
+	</columns>
+</chart>

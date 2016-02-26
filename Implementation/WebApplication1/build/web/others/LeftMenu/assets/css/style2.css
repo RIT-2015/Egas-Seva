@@ -1,0 +1,55 @@
+head {
+	font-family: Akzidenz-Grotesk Condensed BQ;
+	font-size: 18px;
+	color:#313131;
+}
+headBack {
+	font-family: Akzidenz-Grotesk Condensed BQ;
+	font-size: 18px;
+	color:#ffffff;
+}
+body {
+	font-family: Arial;
+	font-size: 12px;
+	color:#313131;
+	font-style:normal;
+	leading:6px;
+}
+bodyBack {
+	font-family: Arial;
+	font-size: 12px;
+	color:#ffffff;
+	leading:6px;
+}
+a{
+	font-family:Arial;
+	font-size:14pt;
+	color:#009FCC;
+	cursor:pointer;
+	font-style:underline;
+}
+a:hover{
+	color:#ffffff;
+}
+date{
+	font-family:Arial;
+	font-size:11px;
+	color:#686868;
+}
+dateBack{
+	font-family:Arial;
+	font-size:11px;
+	color:#323232;
+}
+title{
+	font-family: Tahoma;
+	font-size: 16px;
+	text-align:left;
+	color:#aaaaaa;
+	}
+titleBack{
+	font-family: Tahoma;
+	font-size: 16px;
+	text-align:left;
+	color:#aaaaaa;
+}

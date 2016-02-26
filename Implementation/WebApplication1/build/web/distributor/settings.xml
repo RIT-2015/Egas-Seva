@@ -1,0 +1,48 @@
+<settings>
+  <General_Properties>
+    <componentWidth value="240"/>
+    <componentHeight value="400"/>
+    <assets value="menu.xml"/>
+    <menuX value="0"/>
+    <menuY value="30"/>
+    <menuOrientation value="vertical"/>
+    <menuAlign value="right/top"/>
+    <textOrientation value="horizontal"/>
+    <expandDirection value="left/top"/>
+    <backgroundColor value="0xffffff"/>
+    <textSize value="15"/>
+    <scaleRatio value="1.8"/>
+    <font value="Verdana"/>
+    <embedFont value="true"/>
+    <showAbout value="true"/>
+  </General_Properties>
+  <Animation_Properties>
+    <time value="0.5"/>
+    <timeOut value="0.5"/>
+    <motion value="Back"/>
+    <ease value="easeOut"/>
+  </Animation_Properties>
+  <Menu_Properties>
+    <textColor value="0x000000"/>
+    <backgroundColor value="0xffffff"/>
+    <backgroundAlpha value="1"/>
+    <borderWidth value="0"/>
+    <borderColor value="0xdddddd"/>
+    <borderAlpha value="0.4"/>
+    <cornerRadius value="0"/>
+    <paddingLeft value="20"/>
+    <paddingRight value="0"/>
+    <paddingTop value="0"/>
+    <paddingBottom value="0"/>
+    <spacing value="0"/>
+  </Menu_Properties>
+  <RollOver_Properties>
+    <textOverColor value="0xffffcc"/>
+    <bgOverColor value="0x000000"/>
+    <backgroundAlpha value="1"/>
+    <brOverColor value="0x000000"/>
+    <borderAlpha value="0"/>
+    <colorTweenTime value="0.01"/>
+    <colorTweenOut value="0.2"/>
+  </RollOver_Properties>
+</settings>

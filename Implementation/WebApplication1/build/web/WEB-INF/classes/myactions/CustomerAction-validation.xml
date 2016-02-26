@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : CustomerAction-validation.xml
+    Created on : March 24, 2012, 9:57 PM
+    Author     : shashi
+    Description:
+        Purpose of the document follows.
+-->
+
+<!DOCTYPE validators PUBLIC '-//OpenSymphony Group//XWork Validator 1.0.2//EN' 'http://www.opensymphony.com/xwork/xwork-validator-1.0.2.dtd'>
+
+<validators>         
+   
+  
+    <field name="cust.city">
+        <field-validator type="requiredstring">
+            <message>city is required</message>
+        </field-validator>
+    </field>
+    <field name="customer.state">
+    <field-validator type="requiredstring"><message>state is required.</message></field-validator>
+    </field>
+    
+ 
+    <field name="cust.c_id">
+        <field-validator type="requiredstring">
+            <message>id is required</message>
+        </field-validator>
+    </field>
+    <field name="cust.email">
+        <field-validator type="requiredstring">
+            <message>email id required</message>
+        </field-validator>
+    </field>    
+    <field name="cust.mobile">
+        <field-validator type="requiredstring">
+            <message>mobile no. required</message>
+        </field-validator>
+    </field>
+        
+    <field name="cust.password">
+        <field-validator type="requiredstring">
+            <message>Enter password</message>
+          
+      <!--      <message key="app.password.validaion"/>  -->
+     </field-validator>
+        <field-validator type="stringlength">
+            <param name="maxLength">20</param>
+            <param name="minLength">4</param>
+            <param name="trim">true</param>
+            <message>Enter password 4-20 characters long.</message>
+        </field-validator>
+    </field>    
+    <field name="password2">
+        <field-validator type="fieldexpression">
+            <param name="expression">(cust.password!=password2)</param>
+            <message>Password and Re-Enter Password must be same.</message>
+        </field-validator>
+    </field>   
+ 
+
+</validators>

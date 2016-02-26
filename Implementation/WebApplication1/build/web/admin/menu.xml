@@ -1,0 +1,10 @@
+<menu>
+	<item text="ViewProfile" url="http://localhost:8080/egas/admin/viewProfileAdmin.action" target="" />
+	<item text="Distributors" url="http://localhost:8080/egas/admin/distributor.action" target="" />
+	<item text="NewApplications" url="http://localhost:8080/egas/admin/distributorApplns.action" target=""/>
+	<item text="Product" url="http://localhost:8080/egas/admin/product.action" target=""/>	
+	<item text="FAQ" url="http://localhost:8080/egas/admin/faq.action" target=""/>
+	<item text="Feedback" url="http://localhost:8080/egas/admin/feedback.action" target=""/>
+        <item text="ViewReports" url="http://localhost:8080/egas/admin/reports.action" target=""/>
+        <item text="Send Mail" url="http://localhost:8080/egas/admin/mail.action" target=""/>
+</menu>

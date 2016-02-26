@@ -1,0 +1,103 @@
+<%-- 
+    Document   : topmenu
+    Created on : Feb 24, 2012, 10:25:24 PM
+    Author     : Somesh Mishra
+--%>
+<%@taglib prefix="s" uri="/struts-tags" %>
+  <link rel="stylesheet" href="../resources/css/smartmenu.css" type="text/css"/>
+   <script type="text/javascript" src="../resources/js/jquery-1.3.2.min.js"></script>
+        <script type="text/javascript" src="../resources/js/smartmenu.js"></script> 
+        <script type="text/javascript">
+            jQuery(window).ready(function(){
+            jQuery("#navigation").Smartmenu({animationDuration: 350});
+            });
+        </script>
+<!-- MENU STARTS HERE -->
+<div id="navigation" class="smartmenu">
+<ul>
+<li>
+    <s:if test="#session.user==null">
+<a href="<s:url action="HomePage" namespace="/others"/>">Home</a>
+    </s:if>
+<s:if test="#session.user!=null">
+    <s:if test="#session.user.logintype=='distributor'">
+    <a href="<s:url action="DisHomePage" namespace="/distributor"/>">Home</a>
+    </s:if>
+</s:if>
+</li>
+<li>
+<a href="">About Us</a>
+<ul>
+<li>
+<a href="<s:url action="DisLoginPage" namespace="/others"/>">Overview</a>
+</li>
+<li>
+<a href="<s:url action="DisLoginPage" namespace="/others"/>">Mission and Vision</a>
+</li>
+<li>
+<a href="<s:url action="DisLoginPage" namespace="/others"/>">Awards and Acolades</a>
+</li>
+<li>
+<a href="">OUR Team Structure</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="">Products</a>
+<ul>
+<li>
+<a href="<s:url action="DisLoginPage" namespace="/others"/>">Industrail LPG</a>
+</li>
+<li>
+<a href="<s:url action="DisLoginPage" namespace="/others"/>">Piped LPG</a>
+</li>
+<li>
+<a href="<s:url action="DisLoginPage" namespace="/others"/>">Auto LPG</a>
+</li>
+<li>
+<a href="<s:url action="DisLoginPage" namespace="/others"/>">Metal Cutting Gas</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="">Customer Care</a>
+<ul>
+<li>
+<a href="">Value Added Services</a>
+</li>
+<li>
+<a href="<s:url action="DisLoginPage" namespace="/others"/>">Customer Relation Centers</a>
+</li>
+<li>
+<a href="<s:url action="DisLoginPage" namespace="/others"/>">Emergency Service Cell</a>
+</li>
+<li>
+<a href="<s:url action="DisLoginPage" namespace="/others"/>">Distributor Locator</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="">Your Corner</a>
+<ul>
+<li>
+<a href="">Recepies</a>
+</li>
+<li>
+    <a href="<s:url action="DisLoginPage" namespace="/others"/>">Gallery</a>
+</li>
+<li>
+<a href="">Household Tips</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="">FAQs</a>
+</li>
+<li>
+<a href="">Contact Us</a>
+</li>
+<li>
+    <a href="<s:url action="DisLoginPage" namespace="/others"/>">Distributors Login</a>
+</li>
+</ul>
+</div>

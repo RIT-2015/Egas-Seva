@@ -1,0 +1,599 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+    "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+    "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+    
+<tiles-definitions>
+    <!-- Somesh -->
+    <definition name="main1.layout" template="/common/layout.jsp">
+        <put-attribute name="title" value="Egas Sewa"/>
+        <put-attribute name="header" value="/common/header.jsp" />
+        <put-attribute name="topmenu" value="/common/topmenu.jsp" />
+        <put-attribute name="menu" value="/common/leftmenu.jsp" />
+        <put-attribute name="body" value="" />
+        <put-attribute name="footer" value="/common/footer.jsp" />
+    </definition>
+    
+    <definition name="dis.layout" template="/common/dislayout.jsp">
+        <put-attribute name="title" value="Egas Sewa"/>
+        <put-attribute name="header" value="/common/disheader.jsp" />
+        <put-attribute name="topmenu" value="/common/topmenu.jsp" />
+        <put-attribute name="menu" value="/common/disleftmenu.jsp" />
+        <put-attribute name="body" value="" />
+        <put-attribute name="footer" value="/common/footer.jsp" />
+    </definition>
+    
+    <definition name="main2.layout" template="/common/layout2.jsp">
+        <put-attribute name="title" value="Egas Sewa"/>
+        <put-attribute name="header" value="/common/header.jsp" />
+        <put-attribute name="topmenu" value="/common/topmenu.jsp" />
+        <put-attribute name="body" value="" />
+        <put-attribute name="footer" value="/common/footer.jsp" />
+    </definition>
+    
+    
+    <definition name="main.layout" template="/common/dislayout.jsp">
+        <put-attribute name="title" value="Egas Sewa"/>
+        <put-attribute name="header" value="/common/header.jsp" />
+        <put-attribute name="topmenu" value="/common/topmenu.jsp"/>
+        <put-attribute name="menu" value="/common/customermenu.jsp"/>
+        <put-attribute name="body" value="" />
+        <put-attribute name="footer" value="/common/footer.jsp" />
+    </definition>
+    
+    <definition name="geo.page" extends="dis.layout">   
+        <put-attribute name="body" value="/distributor/Geolocation.jsp" />
+    </definition>
+    
+    <definition name="uneditprofile.page" extends="dis.layout">   
+        <put-attribute name="body" value="/distributor/uneditprofile.jsp" />
+    </definition>
+    
+    <definition name="pin.page" extends="main2.layout">   
+        <put-attribute name="body" value="/others/pinbody.jsp" />
+    </definition>
+    
+    <definition name="userlogin.page" extends="main2.layout">   
+        <put-attribute name="body" value="/others/userloginbody.jsp" />
+    </definition>
+
+    <definition name="Pay.page" extends="main2.layout">   
+        <put-attribute name="body" value="/others/payment.jsp" />
+    </definition>
+    
+    <definition name="dislogin.page" extends="main2.layout">   
+        <put-attribute name="body" value="/others/disloginbody.jsp" />
+    </definition>
+    
+    <definition name="adminlogin.page" extends="main2.layout">   
+        <put-attribute name="body" value="/admin/adminloginbody.jsp" />
+    </definition>
+    
+    <definition name="passwordsent.page" extends="main2.layout">   
+        <put-attribute name="body" value="/others/psbody.jsp" />
+    </definition>
+    
+    <definition name="forgotpassword.page" extends="main2.layout">   
+        <put-attribute name="body" value="/others/fpbody.jsp" />
+    </definition>
+    
+    <definition name="home.page" extends="main1.layout">   
+        <put-attribute name="body" value="/others/homebody.jsp" />
+    </definition>
+    
+    <definition name="profile.page" extends="dis.layout">   
+        <put-attribute name="body" value="/distributor/profilebody.jsp" />
+    </definition>
+    
+    <definition name="prosuccess.page" extends="dis.layout">   
+        <put-attribute name="body" value="/distributor/prosucbody.jsp" />
+    </definition>
+    
+    <definition name="dishome.page" extends="dis.layout">   
+        <put-attribute name="body" value="/distributor/dishomebody.jsp" />
+    </definition>
+    
+    <definition name="viewcus.page" extends="dis.layout">   
+        <put-attribute name="body" value="/distributor/viewcusbody.jsp" />
+    </definition>
+    
+    <definition name="cusdetails.page" extends="dis.layout">   
+        <put-attribute name="body" value="/distributor/cusdetailsbody.jsp" />
+    </definition>
+    
+    <definition name="cusdelsuc.page" extends="dis.layout">   
+        <put-attribute name="body" value="/distributor/cusdelsucbody.jsp" />
+    </definition>
+    
+    <definition name="dishome.page" extends="dis.layout">   
+        <put-attribute name="body" value="/distributor/dishomebody.jsp" />
+    </definition>
+    
+    <definition name="gallery.page" extends="main2.layout">   
+        <put-attribute name="body" value="/static/gallery.jsp" />
+    </definition>
+    
+    <definition name="overview.page" extends="main2.layout">   
+        <put-attribute name="body" value="/static/overbody.jsp" />
+    </definition>
+    
+    <definition name="mission.page" extends="main2.layout">   
+        <put-attribute name="body" value="/static/visionbody.jsp" />
+    </definition>
+    
+    <definition name="awards.page" extends="main2.layout">   
+        <put-attribute name="body" value="/static/awardsbody.jsp" />
+    </definition>
+    
+    <definition name="piped.page" extends="main2.layout">   
+        <put-attribute name="body" value="/static/pipedbody.jsp" />
+    </definition>
+    
+    <definition name="indus.page" extends="main2.layout">   
+        <put-attribute name="body" value="/static/indusbody.jsp" />
+    </definition>
+    
+    <definition name="auto.page" extends="main2.layout">   
+        <put-attribute name="body" value="/static/autolpgbody.jsp" />
+    </definition>
+    
+    <definition name="metal.page" extends="main2.layout">   
+        <put-attribute name="body" value="/static/metalbody.jsp" />
+    </definition>
+    
+    <definition name="cusrel.page" extends="main2.layout">   
+        <put-attribute name="body" value="/static/cusrelationbody.jsp" />
+    </definition>
+    
+    <definition name="emer.page" extends="main2.layout">   
+        <put-attribute name="body" value="/static/emerbody.jsp" />
+    </definition>
+    
+    <definition name="disloc.page" extends="main2.layout">   
+        <put-attribute name="body" value="/static/dislocbody.jsp" />
+    </definition>
+    
+    <definition name="newcusapp.page" extends="dis.layout">   
+        <put-attribute name="body" value="/distributor/newcusappbody.jsp" />
+    </definition>
+    
+    <definition name="newcusdetails.page" extends="dis.layout">   
+        <put-attribute name="body" value="/distributor/newcusdetailsbody.jsp" />
+    </definition>
+    
+    <definition name="enterproof.page" extends="dis.layout">   
+        <put-attribute name="body" value="/distributor/enterproofbody.jsp" />
+    </definition>
+    
+    <definition name="sucinsertproof.page" extends="dis.layout">   
+        <put-attribute name="body" value="/distributor/insertproofsuc.jsp" />
+    </definition>
+    
+    <definition name="customerdisapprove.page" extends="dis.layout">   
+        <put-attribute name="body" value="/distributor/cusdisapprovesuc.jsp" />
+    </definition>
+    
+    <definition name="india.page" extends="main2.layout">   
+        <put-attribute name="body" value="/maps/disloc.jsp" />
+    </definition>
+    
+    <definition name="mumbai.page" extends="main2.layout">   
+        <put-attribute name="body" value="/maps/mumbai.jsp" />
+    </definition>
+    
+    <definition name="chennai.page" extends="main2.layout">   
+        <put-attribute name="body" value="/maps/chennai.jsp" />
+    </definition>
+    
+    <definition name="delhi.page" extends="main2.layout">   
+        <put-attribute name="body" value="/maps/delhi.jsp" />
+    </definition>
+    
+    <definition name="deliveredorder.page" extends="dis.layout">   
+        <put-attribute name="body" value="/distributor/deliveredorder.jsp" />
+    </definition>
+    
+    <definition name="cancelledorders.page" extends="dis.layout">   
+        <put-attribute name="body" value="/distributor/cancelledorders.jsp" />
+    </definition>
+    
+    <definition name="viewreport.page" extends="dis.layout">   
+        <put-attribute name="body" value="/reports/disreport.jsp" />
+    </definition>
+    
+    <definition name="pendingorder.page" extends="dis.layout">   
+        <put-attribute name="body" value="/distributor/pendingorder.jsp" />
+    </definition>
+    
+    <definition name="lpgdelivered.page" extends="dis.layout">   
+        <put-attribute name="body" value="/distributor/lpgdelivered.jsp" />
+    </definition>
+
+    <definition name="mymail.page" extends="dis.layout">   
+        <put-attribute name="body" value="/distributor/mymail.jsp" />
+    </definition>
+    
+    <definition name="mailsuc.page" extends="dis.layout">   
+        <put-attribute name="body" value="/distributor/mailsuc.jsp" />
+    </definition>
+    
+    <definition name="tranferapp.page" extends="dis.layout">   
+        <put-attribute name="body" value="/distributor/transferreqs.jsp" />
+    </definition>
+    
+    <definition name="tranferdetails.page" extends="dis.layout">   
+        <put-attribute name="body" value="/distributor/transferdetails.jsp" />
+    </definition>
+    
+    <definition name="transferapproved.page" extends="dis.layout">   
+        <put-attribute name="body" value="/distributor/proofupdatesuc.jsp" />
+    </definition>
+    
+    <definition name="transferdisapproved.page" extends="dis.layout">   
+        <put-attribute name="body" value="/distributor/transferdisappsuc.jsp" />
+    </definition>
+    
+    <definition name="productDis.page" extends="dis.layout">   
+        <put-attribute name="body" value="/distributor/products.jsp" />
+    </definition>
+    
+    <definition name="distributor.viewFeedbacks" extends="dis.layout">
+        <put-attribute name="body" value="/distributor/viewFeedbacks.jsp"/>
+    </definition>
+
+    <definition name="distributor.detailsFeedback" extends="dis.layout">
+        <put-attribute name="body" value="/distributor/detailsFeedback.jsp"/>
+    </definition>
+    
+    <definition name="reports.page" extends="dis.layout">   
+        <put-attribute name="body" value="/reports/report.jsp" />
+    </definition>
+
+    <definition name="AdminHome.page" extends="dis.layout">   
+        <put-attribute name="body" value="/admin/adminHome.jsp" />
+    </definition>
+    
+    
+    
+
+<!-- shashi -->
+    
+    <!-- updated sss -->
+    
+        
+    <definition name="admin.layout" template="/common/dislayout.jsp">
+        <put-attribute name="title" value="Egas Sewa"/>
+        <put-attribute name="header" value="/common/header.jsp" />
+        <put-attribute name="topmenu" value="/common/topmenu.jsp"/>
+        <put-attribute name="menu" value="/common/adminMenu.jsp"/>
+        <put-attribute name="body" value="" />
+        <put-attribute name="footer" value="/common/footer.jsp" />
+    </definition>
+ 
+ 
+ 
+ 
+   <!-- new --> 
+ 
+ 
+    <definition name="admin.viewProfile" extends="admin.layout">
+        <put-attribute name="body" value="/admin/viewProfile.jsp"/>
+    </definition>
+    
+    <definition name="admin.updateProfile" extends="admin.layout">
+        <put-attribute name="body" value="/admin/updateProfile.jsp"/>
+    </definition>
+ 
+ 
+ 
+ 
+ 
+ 
+      <!-- old --> 
+ 
+ 
+ 
+ 
+ 
+    <definition name="general.home" extends="main2.layout"> 
+        <put-attribute name="menu" value="/layouts/generalMenu.jsp"/>
+        <put-attribute name="body" value="/general/home.jsp" />    
+    </definition>
+          
+    <definition name="general.success" extends="main2.layout">
+        <put-attribute name="body" value="/general/success.jsp" />    
+    </definition>      
+ 
+    <definition name="general.newConnection" extends="main2.layout">
+        <put-attribute name="body" value="/general/newConnection.jsp" />    
+    </definition>
+    
+    <definition name="general.newConSuccess" extends="main2.layout">
+        <put-attribute name="body" value="/general/newConSuccess.jsp" />    
+    </definition>
+
+    <definition name="general.custRegister" extends="main2.layout">   
+        <put-attribute name="body" value="/general/custRegister.jsp" />    
+    </definition>
+ 
+     <definition name="general.distApplication" extends="main2.layout">  
+        <put-attribute name="body" value="/general/distApplication.jsp" />    
+    </definition>
+    
+    <definition name="general.distApplnSuccess" extends="main2.layout">  
+        <put-attribute name="body" value="/general/distApplnSuccess.jsp" />    
+    </definition>
+    
+ 
+    <definition name="general.games" extends="main2.layout">
+        <put-attribute name="body" value="/general/tictactoe.jsp"/>
+    </definition>
+ 
+    <definition name="general.viewFAQs" extends="main2.layout">
+        <put-attribute name="body" value="/general/faq.jsp"/>
+    </definition>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+    
+    <definition name="admin.adminHome" extends="admin.layout">   
+        <put-attribute name="body" value="/admin/adminHome.jsp" />    
+    </definition>
+ 
+    <definition name="admin.distApplications" extends="admin.layout">
+        <put-attribute name="body" value="/admin/distApplications.jsp"/>
+    </definition>
+ 
+    <definition name="admin.viewDistributors" extends="admin.layout">
+        <put-attribute name="body" value="/admin/viewDistributors.jsp"/>
+    </definition>
+    
+    <definition name="admin.detailsDistributor" extends="admin.layout">
+        <put-attribute name="body" value="/admin/detailsDistributor.jsp"/>
+    </definition>
+    
+    <definition name="admin.detailsDistAppln" extends="admin.layout">
+        <put-attribute name="body" value="/admin/detailsDistAppln.jsp"/>
+    </definition>
+ 
+ 
+ 
+ 
+ 
+ 
+   
+    <definition name="admin.viewFAQs" extends="admin.layout">
+        <put-attribute name="body" value="/admin/viewFAQs.jsp"/>
+    </definition> 
+    
+    
+    
+    
+    <definition name="admin.viewProducts" extends="admin.layout">
+        <put-attribute name="body" value="/admin/viewProducts.jsp"/>
+    </definition>
+ 
+    
+    
+    
+    <definition name="admin.viewFeedbacks" extends="admin.layout">
+        <put-attribute name="body" value="/admin/viewFeedbacks.jsp"/>
+    </definition>
+ 
+    <definition name="admin.detailsFeedback" extends="admin.layout">
+        <put-attribute name="body" value="/admin/detailsFeedback.jsp"/>
+    </definition>
+    
+    
+    
+    
+    
+    <definition name="admin.reports" extends="admin.layout">
+        <put-attribute name="body" value="/admin/reports.jsp"/>
+    </definition>
+    
+    <definition name="chart.barchart" extends="admin.layout">
+        <put-attribute name="body" value="/chart/barchart.jsp"/>
+    </definition>
+ 
+    <definition name="chart.piechart" extends="admin.layout">
+        <put-attribute name="body" value="/chart/piechart.jsp"/>
+    </definition>
+    
+    <definition name="chart.customerCities" extends="admin.layout">
+        <put-attribute name="body" value="/chart/customerCities.jsp"/>
+    </definition>
+    
+    <definition name="chart.regCustomerCities" extends="admin.layout">
+        <put-attribute name="body" value="/chart/regCustomerCities.jsp"/>
+    </definition>
+    
+    <definition name="chart.distributorCities" extends="admin.layout">
+        <put-attribute name="body" value="/chart/distributorCities.jsp"/>
+    </definition>
+    
+    
+    
+    
+    
+    <definition name="admin.mailIndex" extends="admin.layout">
+        <put-attribute name="body" value="/admin/mailIndex.jsp"/>
+    </definition>
+    
+    <definition name="admin.sendMail" extends="admin.layout">
+        <put-attribute name="body" value="/admin/sendMail.jsp"/>
+    </definition>
+    
+    
+
+
+
+
+
+
+    
+    
+   
+                <!-- Pratik -->
+  
+    <definition name="cust.sendMail" extends="main.layout">
+        <put-attribute name="body" value="/admin/sendMail.jsp"/>
+    </definition>
+   
+    <definition name="general.feedback" extends="main.layout">
+        <put-attribute name="body" value="/customer/feedback.jsp"/>    
+    </definition>
+    
+    <definition name="general.feedbackSuccess" extends="main.layout">
+        <put-attribute name="body" value="/customer/feedbackSuccess.jsp"/>    
+    </definition>
+  
+<definition name="cushome.page" extends="main.layout">   
+        <put-attribute name="body" value="/customer/cushomebody.jsp" />    
+    </definition>
+
+<definition name="booked.page" extends="main.layout">   
+        <put-attribute name="body" value="/customer/booked.jsp" />    
+    </definition>
+
+
+<definition name="error.page" extends="main.layout">   
+        <put-attribute name="body" value="/customer/error.jsp" />    
+    </definition>
+    
+    <definition name="deleted.page" extends="main.layout">   
+        <put-attribute name="body" value="/customer/deleted.jsp" />    
+    </definition>
+
+
+<definition name="viewprofile.page" extends="main.layout">   
+        <put-attribute name="body" value="/customer/viewprofile.jsp" />    
+    </definition>
+
+<definition name="update.page" extends="main.layout">   
+        <put-attribute name="body" value="/customer/update.jsp" />    
+    </definition>
+
+<definition name="ok.page" extends="main.layout">   
+        <put-attribute name="body" value="/customer/ok.jsp" />    
+    </definition>
+    
+    <definition name="error.page" extends="main.layout">   
+        <put-attribute name="body" value="/customer/error.jsp" />    
+    </definition>
+
+<definition name="changeaddr.page" extends="main.layout">   
+        <put-attribute name="body" value="/customer/changeaddr.jsp" />    
+    </definition>
+
+<definition name="changed.page" extends="main.layout">   
+        <put-attribute name="body" value="/customer/changed.jsp" />    
+    </definition>
+    
+    <definition name="order.page" extends="main.layout">   
+        <put-attribute name="body" value="/customer/order.jsp" />    
+    </definition>
+    
+    <definition name="inserted.page" extends="main.layout">   
+        <put-attribute name="body" value="/customer/inserted.jsp" />    
+    </definition>
+
+    <definition name="TransferReq.page" extends="main.layout">   
+        <put-attribute name="body" value="/customer/TransferReq.jsp" />    
+    </definition>
+    
+    <definition name="tpending.page" extends="main.layout">   
+        <put-attribute name="body" value="/customer/tpending.jsp" />    
+    </definition>
+    
+<definition name="viewproduct.page" extends="main.layout">   
+        <put-attribute name="body" value="/customer/viewproduct.jsp" />    
+    </definition>
+
+<definition name="productbook.page" extends="main.layout">   
+        <put-attribute name="body" value="/customer/productbook.jsp" />    
+    </definition>
+
+<definition name="proOrdPlaced.page" extends="main.layout">   
+        <put-attribute name="body" value="/customer/proOrdPlaced.jsp" />    
+    </definition>
+
+
+<definition name="product.page" extends="main.layout">   
+        <put-attribute name="body" value="/customer/product.jsp" />    
+    </definition>
+<definition name="productorder.page" extends="main.layout">   
+        <put-attribute name="body" value="/customer/productorder.jsp" />    
+    </definition>
+    
+    
+    <definition name="productdelete.page" extends="main.layout">   
+        <put-attribute name="body" value="/customer/productdelete.jsp" />    
+    </definition>
+    
+    <definition name="notallowed.page" extends="main.layout">   
+        <put-attribute name="body" value="/customer/notallowed.jsp" />    
+    </definition>
+    
+    <definition name="deliverOrd.page" extends="main.layout">   
+        <put-attribute name="body" value="/customer/deliverOrd.jsp" />    
+    </definition>
+    <definition name="cancelOrd.page" extends="main.layout">   
+        <put-attribute name="body" value="/customer/cancelOrd.jsp" />    
+    </definition>
+    
+    <definition name="pendingOrd.page" extends="main.layout">   
+        <put-attribute name="body" value="/customer/pendingOrd.jsp" />    
+    </definition>
+    
+    <definition name="Pprod.page" extends="main.layout">   
+        <put-attribute name="body" value="/customer/Pprod.jsp" />    
+    </definition>
+    <definition name="Cprod.page" extends="main.layout">   
+        <put-attribute name="body" value="/customer/Cprod.jsp" />    
+    </definition>
+    <definition name="Dprod.page" extends="main.layout">   
+        <put-attribute name="body" value="/customer/Dprod.jsp" />    
+    </definition>
+    
+    <definition name="chngp.page" extends="main.layout">   
+       
+        <put-attribute name="body" value="/customer/chngp.jsp" />    
+    </definition>
+    
+    <definition name="invite.page" extends="main.layout">   
+        <put-attribute name="body" value="/customer/invite.jsp" />    
+    </definition>
+    
+    
+
+<definition name="chnged.page" extends="main.layout">   
+        
+        <put-attribute name="body" value="/customer/chngedpass.jsp" />    
+    </definition>
+    
+    <definition name="feedback1.page" extends="main.layout">   
+        
+        <put-attribute name="body" value="/customer/feedback1.jsp" />    
+    </definition>
+    
+    <definition name="general.feedback" extends="main.layout">
+        <put-attribute name="body" value="/customer/feedback.jsp"/>    
+    </definition>
+    
+    <definition name="general.feedbackSuccess" extends="main.layout">
+        <put-attribute name="body" value="/customer/feedbackSuccess.jsp"/>    
+    </definition>
+    
+    <definition name="viewfeed.page" extends="main.layout">   
+       
+        <put-attribute name="body" value="/customer/viewfeed.jsp" />    
+    </definition>
+
+</tiles-definitions>

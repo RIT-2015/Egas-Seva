@@ -1,0 +1,415 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<!-- Author: Somesh Mishra-->
+
+<struts>
+    
+    <!-- Configuration for the default package. -->
+
+    <include file="general.xml"/>  
+    <include file="secure.xml"/>
+ 
+    <package name="others" namespace="/others" extends="struts-default">
+   <!--  
+        <interceptors>
+        <interceptor-stack name="secureStack">
+        <interceptor-ref name="secure">
+            <param name="useAnnotations">false</param>
+         </interceptor-ref>
+         <interceptor-ref name="defaultStack"/>
+        </interceptor-stack>
+        </interceptors>
+-->
+        <result-types>
+            <result-type name="tiles" class="org.apache.struts2.views.tiles.TilesResult" />
+        </result-types>
+        
+        
+        
+        
+        <action name="Pay" class="myactions.PaymentAction"> 
+            <result type="tiles">Pay.page</result>
+            <result type="tiles" name="input">Pay.page</result>
+        </action>
+        
+            <action name="HomeAction" class="myactions.MessageMasterAction" method="startTask">
+                <!--<interceptor-ref name="secureStack" />-->
+                <result type="tiles">home.page</result>
+            </action>
+            <action name="UserLoginPage">
+                <result type="tiles">userlogin.page</result>
+            </action>
+            
+            <action name="DisLoginPage">
+                <result type="tiles">dislogin.page</result>
+            </action>
+            
+            <action name="UserLogin" class="myactions.LoginAction" method="authenticate" >
+            <result name="mverify" type="tiles">pin.page</result>
+            <result name="userhome" type="redirect">/customer/customerhome.jsp</result>
+            <result name="userlogin" type="tiles">userlogin.page</result>
+            <result name="dislogin" type="tiles">dislogin.page</result>
+            <result name="adminlogin" type="tiles">adminlogin.page</result>
+            </action>
+            
+            <action name="PinCheck" class="myactions.LoginAction" method="pinCheck">
+            <result name="userhome" type="redirect">/customer/customerhome.jsp</result>
+            <result name="dishome" type="redirect">/distributor/dishome.jsp</result>
+            <result name="adminhome" type="redirect">/admin/adminpage.jsp</result>
+            <result name="wrong" type="tiles">pin.page</result>
+            </action>
+            
+            <action name="SendPassword" class="myactions.ForgotPasswordAction" method="sendPassword">
+                <result type="tiles">passwordsent.page</result>
+                <result name="invalid" type="tiles">forgotpassword.page</result>
+            </action>
+            
+            <action name="Logout" class="myactions.LogoutAction">
+            <result name="success" type="tiles">home.page</result>    
+            </action>
+            
+            <action name="HomePage">
+                <result type="tiles">home.page</result>
+            </action>
+            
+            <action name="ForgotPasswordPage">
+                <result type="tiles">forgotpassword.page</result>
+            </action>     
+   </package>
+   
+   <package name="static" namespace="/static" extends="struts-default">
+       <result-types>
+            <result-type name="tiles" class="org.apache.struts2.views.tiles.TilesResult" />
+        </result-types>
+        
+       <action name="OverviewPage">
+           <result type="tiles">overview.page</result>
+       </action>
+       
+       <action name="MissionPage">
+            <result type="tiles">mission.page</result>
+       </action>
+       
+       <action name="AwardsPage">
+            <result type="tiles">awards.page</result>
+       </action>
+       
+       <action name="IndusPage">
+            <result type="tiles">indus.page</result>
+       </action>
+       
+       <action name="PipedPage">
+            <result type="tiles">piped.page</result>
+       </action>
+       
+       <action name="AutoPage">
+           <result type="tiles">auto.page</result>
+       </action>
+       
+       <action name="MetalPage">
+            <result type="tiles">metal.page</result>
+       </action>
+       
+       <action name="CusrelPage">
+           <result type="tiles">cusrel.page</result>
+       </action>
+       
+       <action name="EmerPage">
+            <result type="tiles">emer.page</result>
+       </action>
+       
+       <action name="DisLocatorPage">
+           <result type="tiles">disloc.page</result>
+       </action>
+       
+       <action name="GalleryPage">
+           <result type="tiles">gallery.page</result>
+       </action>
+   </package>
+   
+   <package name="maps" namespace="/maps" extends="struts-default">
+       <result-types>
+            <result-type name="tiles" class="org.apache.struts2.views.tiles.TilesResult" />
+        </result-types>
+       <action name="IndiaPage">
+           <result type="tiles">india.page</result>
+       </action>
+       <action name="MumbaiPage">
+           <result type="tiles">mumbai.page</result>
+       </action>
+       <action name="DelhiPage">
+           <result type="tiles">delhi.page</result>
+       </action>
+       <action name="ChennaiPage">
+           <result type="tiles">chennai.page</result>
+       </action>
+   </package>
+            
+   <package name="distributor" namespace="/distributor" extends="struts-default">
+       <result-types>
+            <result-type name="tiles" class="org.apache.struts2.views.tiles.TilesResult" />
+        </result-types>
+                
+        
+        <global-results>
+            <result name="home" type="tiles">home.page</result>
+            <result name="input" type="tiles">home.page</result>
+        </global-results>
+        
+        <action name="GeoView">
+            <result type="tiles">geo.page</result>
+        </action>
+        
+        <action name="Geoadd" class="myactions.MapAction">
+            <result type="tiles">geo.page</result>
+        </action>
+        
+        <action name="ProductView" class="myactions.DistributorAction" method="viewProductOrders">
+            <result type="tiles">productDis.page</result>
+        </action>
+        
+        <action name="DeliverProduct" class="myactions.DistributorAction" method="deliverProduct">
+            <result type="tiles">productDis.page</result>
+        </action>
+        
+        <action name="DisHomePage">
+            <result type="tiles">dishome.page</result>
+        </action>
+        
+         <action name="UneditProfile" class="myactions.DistributorAction" method="viewProfile">
+                <result type="tiles">uneditprofile.page</result>
+            </action>
+            
+        <action name="mailSend" >
+            <result type="tiles">admin.sendMail</result>  
+        <!--    <result type="tiles">mailsuc.page</result>    -->
+            <result name="failure" type="tiles">mymail.page</result>            
+        </action>
+        
+            <action name="ViewProfile" class="myactions.DistributorAction" method="viewProfile">
+                <result type="tiles">profile.page</result>
+            </action>
+            
+            <action name="UpdateProfile" class="myactions.DistributorAction" method="updateProfile">
+            <result type="tiles">prosuccess.page</result>    
+            </action>
+            
+            <action name="DisHome">
+                <result type="tiles">dishome.page</result>
+            </action>
+            
+            <action name="ViewCustomer" class="myactions.DistributorAction" method="viewCustomer">
+                <result name="success" type="tiles">viewcus.page</result>
+            </action>
+            
+            <action name="CustomerDetails" class="myactions.DistributorAction" method="getCustomerDetails">
+                <result name="success" type="tiles">cusdetails.page</result>
+            </action>
+            <action name="DeleteCustomer" class="myactions.DistributorAction" method="deleteCustomer">
+               <result type="tiles">cusdelsuc.page</result> 
+            </action>
+            
+            <action name="NewApplication" class="myactions.DistributorAction" method="newApplications">
+                 <result type="tiles">newcusapp.page</result>
+            </action>
+            
+            <action name="NewCustomerDetails" class="myactions.DistributorAction" method="getNewAppDetails">
+                <result type="tiles">newcusdetails.page</result>
+            </action>
+            
+            <action name="InsertCusProof" class="myactions.DistributorAction" method="insertProof">
+                <result type="tiles">sucinsertproof.page</result>
+            </action>
+            
+            <action name="DisapproveCustomer" class="myactions.DistributorAction" method="disapproveCustomer">
+                <result type="tiles">customerdisapprove.page</result>
+            </action>
+            
+            <action name="DeliveredOrders" class="myactions.DistributorAction" method="getDeliveredOrders">
+                <result type="tiles">deliveredorder.page</result>
+            </action>
+            <action name="CancelledOrders" class="myactions.DistributorAction" method="getCancelledOrders">
+                <result type="tiles">cancelledorders.page</result>
+            </action>
+            
+            <action name="PendingOrders" class="myactions.DistributorAction" method="getPendingOrders">
+                <result type="tiles">pendingorder.page</result>
+            </action>
+            
+            <action name="DeliverLPG" class="myactions.DistributorAction" method="deliverLPG">
+                <result type="tiles">lpgdelivered.page</result>
+            </action>
+            
+            <action name="SendMail">
+                <result type="tiles">mymail.page</result>
+            </action>
+            
+            <action name="NewTransferReq" class="myactions.DistributorAction" method="getTransferReqs">
+                <result type="tiles">tranferapp.page</result>
+            </action>
+            
+            <action name="TransferDetails" class="myactions.DistributorAction" method="getNewTransferAppDetails">
+                <result type="tiles">tranferdetails.page</result>
+            </action>
+            
+            <action name="UpdateCusProof" class="myactions.DistributorAction" method="updateProof">
+                <result type="tiles">transferapproved.page</result>
+            </action>
+            
+            <action name="TransferDisapprove" class="myactions.DistributorAction" method="disapproveTransfer">
+                <result type="tiles">transferdisapproved.page</result>
+            </action>
+                       
+                
+            
+        <action name="ViewReports">
+            <result type="tiles">reports.page</result>
+        </action>
+        
+         
+        <action name="feedbackDel" class="myactions.FeedbackAction" method="deleteFeedback">
+            <result name="success" type="tiles">distributor.viewFeedbacks</result>
+        </action>
+        
+        <action name="feedbackD" class="myactions.FeedbackAction" method="getFeedbacksD"> 
+            <result name="success" type="tiles">distributor.viewFeedbacks</result>
+        </action>
+        
+        <action name="feedbackDetails" class="myactions.FeedbackAction" method="feedbackDetails">
+            <result name="success" type="tiles">distributor.detailsFeedback</result>
+        </action>
+  
+        <action name="feedbackReply" class="myactions.FeedbackAction" method="reply">
+            <result name="success" type="tiles">distributor.detailsFeedback</result>
+        </action>
+      
+      
+      
+      
+      
+           
+    </package>
+ 
+ <package name="report" namespace="/reports" extends="struts-default">
+        <result-types>
+            <result-type name="jasper" class="org.apache.struts2.views.jasperreports.JasperReportsResult"/>
+            <result-type name="tiles" class="org.apache.struts2.views.tiles.TilesResult" />
+        </result-types>
+        
+        
+               <action name="LPGOrderPDF" class="myactions.JasperAction" method="lpgOrder">
+            <result name="success" type="jasper">
+            <param name="location">/reports/LPGOrderDis.jasper</param>
+            <param name="dataSource">lpgOrders</param>
+        </result>
+        </action>
+        
+        <action name="LPGOrderXLS" class="myactions.JasperAction" method="lpgOrder">
+            <result name="success" type="jasper">
+            <param name="location">/reports/LPGOrderDis.jasper</param>
+            <param name="dataSource">lpgOrders</param>
+            <param name="format">RTF</param>
+        </result>
+        </action>
+        
+        <action name="myJasperTest" class="myactions.JasperAction" method="execute">
+        <result name="success" type="jasper">
+            <param name="location">/reports/our_compiled_template.jasper</param>
+            <param name="dataSource">myList</param>
+        </result>
+        <result name="error">/reports/error.jsp</result>
+    </action> 
+ </package>
+  
+  
+  
+  
+  <!--Pratik-->
+  
+  <package name="customer" namespace="/customer" extends="struts-default">
+      
+      <result-types>
+            <result-type name="tiles" class="org.apache.struts2.views.tiles.TilesResult" />
+        </result-types>
+      
+      <action name="CusHome" >
+          <result type="tiles">cushome.page</result>
+      </action>
+      
+      <action name="feedbackForm">
+            <result type="tiles">general.feedback</result>    
+        </action>
+        
+        <action name="feedbackSend" class="myactions.FeedbackAction" method="insertFeedback"> 
+            <result name="success" type="tiles">general.feedbackSuccess</result>
+            <result name="login" type="tiles">general.home</result>  
+            <result name="input" type="tiles">general.feedback</result>
+            <result name="feedback1" type="tiles">feedback1.page</result>
+        </action>
+        
+        
+      <action name="OrderAction!*" class="myactions.OrderAction" method="{1}">
+         <result name="success" type="tiles">booked.page</result>
+         <result name="fault" type="tiles">error.page</result>
+         <result name="delete" type="tiles">deleted.page</result>
+         <result name="insert" type="tiles">inserted.page</result>
+         <result name="home" type="tiles">home.page</result>
+         <result name="generate" type="tiles">order.page</result>
+          <result name="notallowed" type="tiles">notallowed.page</result>
+          <result name="deliveredOrd" type="tiles">deliverOrd.page</result>
+          <result name="cancelledOrd" type="tiles">cancelOrd.page</result> 
+          <result name="penOrd" type="tiles">pendingOrd.page</result>
+          
+          </action>
+          
+          
+          <action name="OrderproductAction!*" class="myactions.OrderproductAction" method="{1}">
+          <result name="productorder" type="tiles">productorder.page</result>
+          <result name="deleteproduct" type="tiles">productdelete.page</result>
+          <result name="Dprod" type="tiles">Dprod.page</result>
+          <result name="Cprod" type="tiles">Cprod.page</result>
+          <result name="Pprod" type="tiles">Pprod.page</result>
+          <result name="generate" type="tiles">productbook.page</result>
+          <result name="proOrder" type="tiles">proOrdPlaced.page</result>
+          </action>
+     
+     <action name="CustomerAction!*" class="myactions.CustomerAction" method="{1}">
+        <result name="success" type="tiles">viewprofile.page</result>
+        <result name="error" type="tiles">error.page</result>
+        <result name="update" type="tiles">update.page</result>
+        <result name="profile" type="tiles">ok.page</result>
+        <result name="home" type="tiles">home.page</result>
+       <result name="viewproduct" type="tiles">viewproduct.page</result>
+       <result name="product" type="tiles">product.page</result>
+       <result name="chng" type="tiles">chngp.page</result>
+       <result name="changed" type="tiles">chnged.page</result>
+       <result name="invite" type="tiles">invite.page</result>
+       </action>
+     
+     <action name="TransferAction!*" class="myactions.TransferAction" method="{1}">
+        <result name="success" type="tiles">changeaddr.page</result>
+        <result name="transfer" type="tiles">changed.page</result>
+        <result name="error" type="tiles">error.page</result>
+        <result name="home" type="tiles">home.page</result>
+        <result name="generate" type="tiles">TransferReq.page</result>
+        <result name="Treqpending" type="tiles">tpending.page</result>
+
+        </action>
+     
+     
+     <action name="mailSend" >
+            <result type="tiles">cust.sendMail</result>  
+        <!--    <result type="tiles">mailsuc.page</result>    -->
+                
+        </action>
+     
+     
+     
+    </package>
+  
+  
+  
+  
+</struts>
